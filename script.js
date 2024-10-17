@@ -106,3 +106,25 @@ function getTemperatur(value) {
     };
     return temperatures[value];
 }
+
+function calculateSeri() {
+ 
+    const inputSeri = document.getElementById("seri").value;
+   
+    const Seri = inputSeri.split(',').map(Number);
+
+    const sum = Seri.reduce((acc, rangkaianSeri) => acc + rangkaianSeri, 0);
+
+    document.getElementById("result-seri").innerText = "Jumlah: " + sum;
+}
+
+function calculatePararel() {
+ 
+    const inputPararel = document.getElementById("pararel").value;
+   
+    const Pararel = inputPararel.split(',').map(Number);
+
+    const inverseSum = Pararel.reduce((acc, rangkaianPararel) => acc + (1/rangkaianPararel), 0);
+
+    document.getElementById("result-pararel").innerText = "Jumlah: " + 1/inverseSum ;
+}

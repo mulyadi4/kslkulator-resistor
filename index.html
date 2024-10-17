@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div>
     <h1>Resistor Calculator</h1>
     <div class="resistor-container">
         <div class="resistor-terminal"></div>
@@ -124,6 +125,20 @@
     <button onclick="calculateResistor()">Calculate</button>
     <p id="result">Resistance: </p>
 
+  </div>
+<div>
+    <label id="resistor-Seri" for="seri">Kalkulator rangkaian Seri</label> <br>
+    <textarea id="seri">1,1,1</textarea> <br>
+    <button onclick="calculateSeri()">Calculate</button>
+    <p id="result-seri"></p>
+</div>
+
+<div>
+    <label id="resistor-Pararel" for="pararel">Kalkulator rangkaian Pararel</label> <br>
+    <textarea id="pararel">1,1,1</textarea> <br>
+    <button onclick="calculatePararel()">Calculate</button>
+    <p id="result-pararel"></p>
+</div>
 
     
     <script src="script.js"></script>
