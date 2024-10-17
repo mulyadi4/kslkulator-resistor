@@ -1,0 +1,40 @@
+.resistor-container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Resistor body */
+.resistor-body {
+    width: 200px;
+    height: 60px;
+    background-color: #f4f4d2; /* Light cream body */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: relative;
+}
+
+/* Resistor terminals (wires) */
+.resistor-terminal {
+    width: 50px;
+    height: 8px;
+    background-color: #666;
+}
+
+/* Band style */
+.band {
+    width: 10px;
+    height: 60px;
+}
+
+/* Default band colors */
+#band1 { background-color: black; }
+#band2 { background-color: black; }
+#band3 { background-color: black; }
+#band4 { background-color: black; }
+#band5 { background-color: red; }
+#band6 { background-color: black; }

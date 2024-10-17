@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resistor Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Resistor Calculator</h1>
+    <div class="resistor-container">
+        <div class="resistor-terminal"></div>
+        <div class="resistor-body">
+            <div class="band" id="band1"></div>
+            <div class="band" id="band2"></div>
+            <div class="band" id="band3"></div>
+            <div class="band" id="band4"></div>
+            <div class="band" id="band5"></div>
+            <div class="band" id="band6"></div>
+        </div>
+        <div class="resistor-terminal"></div>
+    </div>
+
+    <label for="jumlah-band">Number of Bands:</label>
+    <select id="jumlah-band" onchange="updateBandVisibility()">
+        <option value="6">6</option>
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+    </select>
+    <br><br>
+
+    <label for="band1-color">Band 1:</label>
+    <select id="band1-color">
+        <option value="0">Black(0)</option>
+        <option value="1">Brown(1)</option>
+        <option value="2">Red(2)</option>
+        <option value="3">Orange(3)</option>
+        <option value="4">Yellow(4)</option>
+        <option value="5">Green(5)</option>
+        <option value="6">Blue(6)</option>
+        <option value="7">Violet(7)</option>
+        <option value="8">Gray(8)</option>
+        <option value="9">White(9)</option>
+    </select>
+    <br><br>
+
+    <label for="band2-color">Band 2:</label>
+    <select id="band2-color">
+        <option value="0">Black(0)</option>
+        <option value="1">Brown(1)</option>
+        <option value="2">Red(2)</option>
+        <option value="3">Orange(3)</option>
+        <option value="4">Yellow(4)</option>
+        <option value="5">Green(5)</option>
+        <option value="6">Blue(6)</option>
+        <option value="7">Violet(7)</option>
+        <option value="8">Gray(8)</option>
+        <option value="9">White(9)</option>
+    </select>
+    <br><br>
+
+    <label for="band3-color">Band 3:</label>
+    <select id="band3-color">
+        <option value="0">Black(0)</option>
+        <option value="1">Brown(1)</option>
+        <option value="2">Red(2)</option>
+        <option value="3">Orange(3)</option>
+        <option value="4">Yellow(4)</option>
+        <option value="5">Green(5)</option>
+        <option value="6">Blue(6)</option>
+        <option value="7">Violet(7)</option>
+        <option value="8">Gray(8)</option>
+        <option value="9">White(9)</option>
+    </select>
+    <br><br>
+
+    <label for="multiplier-color">Multiplier:</label>
+    <select id="multiplier-color">
+        <option value="1">Black (x1)</option>
+        <option value="10">Brown (x10)</option>
+        <option value="100">Red (x100)</option>
+        <option value="1000">Orange (x1K)</option>
+        <option value="10000">Yellow (x10K)</option>
+        <option value="100000">Green (x100K)</option>
+        <option value="1000000">Blue (x1M)</option>
+        <option value="10000000">Violet (x10M)</option>
+        <option value="100000000">Gray (x100M)</option>
+        <option value="1000000000">White (x1G)</option>
+        <option value="0.1">Gold (x0.1)</option>
+        <option value="0.01">Silver (x0.01)</option>
+    </select>
+    <br><br>
+
+    <label for="tolerance-color">Tolerance:</label>
+    <select id="tolerance-color">
+        <option value="1">Brown (±1%)</option>
+        <option value="2">Red (±2%)</option>
+        <option value="0.05">Orange (±0.05%)</option>
+        <option value="0.02">Yellow (±0.02%)</option>
+        <option value="0.5">Green (±0.5%)</option>
+        <option value="0.25">Blue (±0.25%)</option>
+        <option value="0.1">Violet (±0.1%)</option>
+        <option value="0.01">Grey (±0.01%)</option>
+        <option value="5">Gold (±5%)</option>
+        <option value="10">Silver (±10%)</option>
+    </select>
+    <br><br>
+
+    <label for="temperature-color">Temperature:</label>
+    <select id="temperature-color">
+        <option value="250">Black (250 ppm/K)</option>
+        <option value="100">Brown (100 ppm/K)</option>
+        <option value="50">Red (50 ppm/K)</option>
+        <option value="15">Orange (15 ppm/K)</option>
+        <option value="25">Yellow (25 ppm/K)</option>
+        <option value="20">Green (20 ppm/K)</option>
+        <option value="10">Blue (10 ppm/K)</option>
+        <option value="5">Violet (5 ppm/K)</option>
+        <option value="1">Grey (1 ppm/K)</option>
+    </select>
+    <br><br>
+
+    <button onclick="calculateResistor()">Calculate</button>
+    <p id="result">Resistance: </p>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
